@@ -1129,11 +1129,23 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
+// MiuiCamera.apk is over GitHub's 100 MB file limit, so it's stored in
+// parts and joined at build time.
+genrule {
+    name: "MiuiCamera_apk",
+    srcs: [
+        "proprietary/system/priv-app/MiuiCamera/MiuiCamera.apk.part00",
+        "proprietary/system/priv-app/MiuiCamera/MiuiCamera.apk.part01",
+    ],
+    out: ["MiuiCamera.apk"],
+    cmd: "cat $(in) > $(out)",
+}
+
 android_app_import {
     name: "MiuiCamera",
 	overrides: ["Snap", "Camera2", "GCamGOPrebuilt", "Aperture"],
     owner: "xiaomi",
-    apk: "proprietary/system/priv-app/MiuiCamera/MiuiCamera.apk",
+    apk: ":MiuiCamera_apk",
     certificate: "platform",
     dex_preopt: {
         enabled: false,
