@@ -1151,6 +1151,15 @@ android_app_import {
         enabled: false,
     },
     privileged: true,
+    required: [
+        "MiuiCamera_lib_libsnpe_dsp_domains_v2",
+        "MiuiCamera_lib_libsnpe_dsp_skel",
+        "MiuiCamera_lib_libsnpe_dsp_v65_domains_v2_skel",
+        "MiuiCamera_lib_libsnpe_dsp_v66_domains_v2_skel",
+        "MiuiCamera_lib_libSNPE",
+        "MiuiCamera_lib_libsymphony-cpu",
+        "miuicamera_system_libSNPE",
+    ],
 }
 
 android_app_import {
@@ -1173,4 +1182,22 @@ android_app_import {
         enabled: false,
     },
     privileged: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "miuicamera_system_libSNPE",
+    stem: "libSNPE",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/libSNPE.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
 }
