@@ -1158,6 +1158,11 @@ android_app_import {
         "MiuiCamera_lib_libsnpe_dsp_v66_domains_v2_skel",
         "MiuiCamera_lib_libSNPE",
         "MiuiCamera_lib_libsymphony-cpu",
+        "MiuiCamera_lib_libvideo_extra_interpolator",
+        "MiuiCamera_lib_libvideo_extra_color_converter",
+        "MiuiCamera_lib_libDocumentProcess",
+        "MiuiCamera_lib_libmialgo_saliency_jni",
+        "MiuiCamera_lib_libYuvWatermark",
         "miuicamera_system_libSNPE",
     ],
 }

@@ -80,3 +80,63 @@ LOCAL_MODULE_PATH := $(TARGET_OUT)/priv-app/MiuiCamera/lib/arm64
 LOCAL_CHECK_ELF_FILES := false
 LOCAL_STRIP_MODULE := false
 include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := MiuiCamera_lib_libvideo_extra_interpolator
+LOCAL_MODULE_STEM := libvideo_extra_interpolator
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MULTILIB := 64
+LOCAL_SRC_FILES := proprietary/system/priv-app/MiuiCamera/lib/arm64/libvideo_extra_interpolator.so
+LOCAL_MODULE_PATH := $(TARGET_OUT)/priv-app/MiuiCamera/lib/arm64
+LOCAL_CHECK_ELF_FILES := false
+LOCAL_STRIP_MODULE := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := MiuiCamera_lib_libvideo_extra_color_converter
+LOCAL_MODULE_STEM := libvideo_extra_color_converter
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MULTILIB := 64
+LOCAL_SRC_FILES := proprietary/system/priv-app/MiuiCamera/lib/arm64/libvideo_extra_color_converter.so
+LOCAL_MODULE_PATH := $(TARGET_OUT)/priv-app/MiuiCamera/lib/arm64
+LOCAL_CHECK_ELF_FILES := false
+LOCAL_STRIP_MODULE := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := MiuiCamera_lib_libDocumentProcess
+LOCAL_MODULE_STEM := libDocumentProcess
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MULTILIB := 64
+LOCAL_SRC_FILES := proprietary/system/priv-app/MiuiCamera/lib/arm64/libDocumentProcess.so
+LOCAL_MODULE_PATH := $(TARGET_OUT)/priv-app/MiuiCamera/lib/arm64
+LOCAL_CHECK_ELF_FILES := false
+LOCAL_STRIP_MODULE := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := MiuiCamera_lib_libmialgo_saliency_jni
+LOCAL_MODULE_STEM := libmialgo_saliency_jni
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MULTILIB := 64
+LOCAL_SRC_FILES := proprietary/system/priv-app/MiuiCamera/lib/arm64/libmialgo_saliency_jni.so
+LOCAL_MODULE_PATH := $(TARGET_OUT)/priv-app/MiuiCamera/lib/arm64
+LOCAL_CHECK_ELF_FILES := false
+LOCAL_STRIP_MODULE := false
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := MiuiCamera_lib_libYuvWatermark
+LOCAL_MODULE_STEM := libYuvWatermark
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MULTILIB := 64
+LOCAL_SRC_FILES := proprietary/system/priv-app/MiuiCamera/lib/arm64/libYuvWatermark.so
+LOCAL_MODULE_PATH := $(TARGET_OUT)/priv-app/MiuiCamera/lib/arm64
+LOCAL_CHECK_ELF_FILES := false
+LOCAL_STRIP_MODULE := false
+include $(BUILD_PREBUILT)
