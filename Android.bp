@@ -1220,3 +1220,22 @@ cc_prebuilt_library_shared {
     check_elf_files: false,
     soc_specific: true,
 }
+
+cc_prebuilt_library_shared {
+    name: "miuicamera_vendor_libmialgoengine",
+    stem: "libmialgoengine",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/leica/libmialgoengine.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    soc_specific: true,
+}
