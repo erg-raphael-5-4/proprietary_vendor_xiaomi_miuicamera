@@ -1201,3 +1201,22 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     check_elf_files: false,
 }
+
+cc_prebuilt_library_shared {
+    name: "miuicamera_vendor_libswregistrationalgo",
+    stem: "libswregistrationalgo",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/leica/libswregistrationalgo.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    soc_specific: true,
+}
