@@ -1236,7 +1236,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/leica/libmialgoengine.so",
+                "proprietary/vendor/lib64/libmialgoengine.so",
             ],
         },
     },
