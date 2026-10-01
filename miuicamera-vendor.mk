@@ -50,3 +50,8 @@ PRODUCT_PACKAGES += \
     MiuiCamera \
     MiuiExtraPhoto \
     MiuiScanner
+
+# Leica port watermark fonts and filter thumbnails
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/xiaomi/miuicamera/proprietary/vendor/camera,$(TARGET_COPY_OUT_VENDOR)/camera) \
+    $(call find-copy-subdir-files,*.png,vendor/xiaomi/miuicamera/proprietary/vendor/etc/camera,$(TARGET_COPY_OUT_VENDOR)/etc/camera)
